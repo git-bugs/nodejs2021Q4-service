@@ -7,7 +7,6 @@ const fastify = require('./app');
       console.log(`App is running on http://localhost:${PORT}`)
     );
   } catch (error) {
-    fastify.log.error(error);
-    process.exit(1);
+    console.log(error)
   }
 })();
