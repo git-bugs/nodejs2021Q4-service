@@ -1,8 +1,7 @@
 let users = [];
 
-const getAllUsers = async () =>
-  // TODO: mock implementation. should be replaced during task development
-  users;
+const getAllUsers = async () => users;
+
 const getUserById = (userId) => users.find((item) => item.id === userId);
 
 const addNewUser = (newUser) => {
