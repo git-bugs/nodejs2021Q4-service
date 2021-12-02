@@ -14,4 +14,6 @@ fastify.get('/', (req, reply) => {
   reply.send('Service is running!');
 });
 
+fastify.register(require('./resources/users/user.router'));
+
 module.exports = fastify;

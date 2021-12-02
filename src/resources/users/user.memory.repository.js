@@ -1,6 +1,28 @@
-const getAll = async () => {
+let users = [];
+
+const getAllUsers = async () =>
   // TODO: mock implementation. should be replaced during task development
-  return [];
+  users;
+const getUserById = (userId) => users.find((item) => item.id === userId);
+
+const addNewUser = (newUser) => {
+  users.push(newUser);
 };
 
-module.exports = { getAll };
+const updateUser = (updatedUser) => {
+  users = users.map((item) =>
+    item.id === updatedUser.id ? updatedUser : item
+  );
+};
+
+const deleteUser = (userId) => {
+  users = users.filter((item) => item.id !== userId);
+};
+
+module.exports = {
+  getAllUsers,
+  addNewUser,
+  getUserById,
+  updateUser,
+  deleteUser,
+};
